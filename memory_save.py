@@ -1,5 +1,3 @@
-import numpy as np   # import numpy
-import pandas as pd  # import pandas
 import os
 import gc   # for gabage collection
 import seaborn as sns  # data visualization lib
