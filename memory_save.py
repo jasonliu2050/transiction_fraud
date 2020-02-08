@@ -49,3 +49,4 @@ for f in features:
 print('changed columns = ', changed)
 mem_use = train_df.memory_usage().sum() / 1024**2  # convert bytes to MB by dividing 1024**2
 print('Memory usage of dataframe is {:.2f} MB'.format(mem_use))
+yy
