@@ -9,21 +9,6 @@ import glob
 train='h:\\machine_learning\\transaction_fraud\\train_transaction.csv'
 identity = 'h:\\machine_learning\\transaction_fraud\\train_identity.csv'
 
-def plot_corr(df, cols):
-    fig = plt.figure(figsize=(10, 8))
-    sns.heatmap(df[cols].corr(), cmap='RdBu_r', annot=True, center=0.0)
-    plt.show()
-
-
-def plot_count(df, col, fsize, rotation=None, fillna=True):
-    fig = plt.figure(figsize=fsize)
-    if fillna:
-        value_count = df[col].fillna('unknown').value_counts()
-    sns.barplot(value_count.index, value_count.values)
-    plt.xticks(rotation=rotation)
-    plt.title('value counts for {}'.format(col))
-    plt.show()
-
 def load_data(path):
     df = pd.read_csv(path) # this is main table
     return df
