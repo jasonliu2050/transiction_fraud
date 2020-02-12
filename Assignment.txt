@@ -1,1 +1,24 @@
 
+Assignment 1
+write a function to remove redundant features by correlation analysis
+for example, from above heatmap, we want to remove one from V48, V49, please teams come up with one smart way of 
+removing them. Please complete for all anonymous features using this method and save the code as part of your project solutions.
+
+dict_keys([0, 
+8933, 1565, 1577, 4259, 1571, 65706, 352271, 552913, 94456, 508189                              =====> Marco
+453249, 1269, 280797, 262878, 168922, 309841, 517353, 551623, 515614, 76022,                    =====> Yifan
+279287, 525823, 528588, 528353, 89113, 271100, 281444, 350482, 169360, 346265,                  =====> Saidath
+346252, 76073, 168969, 77096, 89164, 314, 508595, 508589, 450909, 450721, 460110, 449124, 12,   =====> Jun
+
+])
+
+
+
+Assignment 2: write a function to process email domain                                             =====> Jun
+Assignment 3: handle addr1-2, card 1- 6                                                            =====> Saidath
+Assignment 4: process transaction amt                                                              =====> Yifan
+Assignment 5: process transactionDT and convert them into real date time                           =====> Marco
+
+
+
+Assignment 6: use the previous skills(Q1 ~ Q5) to process train_idn 
