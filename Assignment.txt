@@ -4,6 +4,10 @@ write a function to remove redundant features by correlation analysis
 for example, from above heatmap, we want to remove one from V48, V49, please teams come up with one smart way of 
 removing them. Please complete for all anonymous features using this method and save the code as part of your project solutions.
 
+Drop corr feature function:
+https://github.com/jasonliu2050/transiction_fraud/blob/master/drop_features.py
+
+To be verified each group: 
 dict_keys([0, 
 8933, 1565, 1577, 4259, 1571, 65706, 352271, 552913, 94456, 508189                              =====> Marco
 453249, 1269, 280797, 262878, 168922, 309841, 517353, 551623, 515614, 76022,                    =====> Yifan
@@ -15,6 +19,9 @@ dict_keys([0,
 
 
 Assignment 2: write a function to process email domain                                             =====> Jun
+
+
+
 Assignment 3: handle addr1-2, card 1- 6                                                            =====> Saidath
 Assignment 4: process transaction amt                                                              =====> Yifan
 Assignment 5: process transactionDT and convert them into real date time                           =====> Marco
