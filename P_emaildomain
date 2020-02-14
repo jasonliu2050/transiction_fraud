@@ -1,0 +1,50 @@
+import numpy as np   # import numpy
+import pandas as pd  # import pandas
+import os
+import gc   # for gabage collection
+import seaborn as sns  # data visualization lib
+import matplotlib.pyplot as plt
+import glob
+
+train='h:\\machine_learning\\transaction_fraud\\train_transaction.csv'
+identity = 'h:\\machine_learning\\transaction_fraud\\train_identity.csv'
+def load_data(path):
+    df = pd.read_csv(path) # this is main table
+    return df
+
+REGION = {
+    ".jp": "Japan",
+    ".fr": "French",
+    ".uk": "UK",
+    ".mx": "Mexico",
+    ".de": "German",
+    ".es": "Spain",
+    ".com": "Global",
+    ".net": "Global"
+}
+# Function to clean the names
+def assign_region(email_addr):
+    for key in REGION.keys():
+        if email_addr.find(key) != -1:
+            return REGION[key]
+
+def main():
+    df = load_data(train)
+    identity_df = load_data(identity)
+
+    # process NaN value
+    df['P_emaildomain'].fillna('TBD', inplace=True)
+    #create a new column
+    df = df.assign(Region_emaildomain=df['P_emaildomain'])
+    # process P_emaildomain column
+    df.loc[df['P_emaildomain'] == 'TBD', 'Region_emaildomain'] = 'Global'
+    df.loc[df['P_emaildomain'] == 'yahoo', 'P_emaildomain'] = 'yahoo.com'
+    df.loc[df['P_emaildomain'] == 'gmail', 'P_emaildomain'] = 'gmail.com'
+
+    df['Region_emaildomain'] = df['Region_emaildomain'].apply(assign_region)
+    # Print the updated dataframe
+    print(df['Region_emaildomain'].head)
+
+    print(df['Region_emaildomain'].unique())
+if __name__== "__main__":
+  main()
