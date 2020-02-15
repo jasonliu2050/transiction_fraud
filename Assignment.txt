@@ -16,7 +16,7 @@ dict_keys([0,
 
 ])
 
-
+### to be sure the target corr is valid for select feature to drop
 
 Assignment 2: write a function to process email domain                                             =====> Jun
 https://github.com/jasonliu2050/transiction_fraud/blob/master/P_emaildomain
