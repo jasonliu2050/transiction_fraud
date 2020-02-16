@@ -91,7 +91,7 @@ def main():
     # f1_scores, error_rate = train_KNeighborsClassifier(train_df, target)
     # print(f1_scores, error_rate)
 
-    # train knn model and get result
+    # train lgb model and get result
     X = train_df   #.to_numpy()
     y = target     #.to_numpy()
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1000)
