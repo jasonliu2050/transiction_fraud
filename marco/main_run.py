@@ -10,6 +10,7 @@ from preprocessing import load_data
 from feature_engineering import extract_features
 from utils import reduce_mem_usage
 import lightgbm as lgb
+import matplotlib.pyplot as plt
 
 
 def train_model(model_name, X_train, y_train):
@@ -28,8 +29,7 @@ def train_model(model_name, X_train, y_train):
                 pickle.dump(model, handle)
 #code to visualize feature importance
             ax = lgb.plot_importance(model, max_num_features=40, figsize=(15,15))
-            plt.show()
-            
+            plt.show()         
             del model, X_tr, X_vl
             gc.collect()
         if model_name == 'rf':
