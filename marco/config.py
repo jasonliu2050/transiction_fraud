@@ -1,8 +1,8 @@
 """
 all parameters and configurations
 """
-#DATA_PATH = "E:\\CEBD1260\\Transaction_Fraud_Project\\"
-DATA_PATH = "/Users/marco/Projects/Transaction_Fraud_Project/"
+DATA_PATH = "E:\\CEBD1260\\Transaction_Fraud_Project\\"
+#DATA_PATH = "/Users/marco/Projects/Transaction_Fraud_Project/"
 n_estimator = 100
 max_depth = 10
 seed = 10
