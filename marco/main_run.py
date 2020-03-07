@@ -11,6 +11,8 @@ from feature_engineering import extract_features
 from utils import reduce_mem_usage
 import lightgbm as lgb
 import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error
+import numpy as np
 
 
 def train_model(model_name, X_train, y_train):
@@ -24,12 +26,18 @@ def train_model(model_name, X_train, y_train):
         if model_name == 'lgb':
             model = model_lgb()
             model.fit(X_tr, y_tr, eval_set=[(X_tr, y_tr), (X_vl, y_vl)], \
-                      eval_metric='rmse', verbose=config.verbose, early_stopping_rounds=config.stop_rounds)
+                      eval_metric='auc', verbose=config.verbose, early_stopping_rounds=config.stop_rounds)
             with open('lgb_model_{}.pkl'.format(i), 'wb') as handle:
                 pickle.dump(model, handle)
 #code to visualize feature importance
-            ax = lgb.plot_importance(model, max_num_features=40, figsize=(15,15))
-            plt.show()         
+            ax = lgb.plot_importance(model, max_num_features=100, figsize=(15,15))
+#            ax2 = lgb.plot_tree(model,figsize=(15,15))
+            ax3 = lgb.plot_metric(model,figsize=(15,15))
+            plt.show()
+            pred_y_val=model.predict(X_vl)
+            score=mean_squared_error(pred_y_val,y_vl)
+            cv_scores.append(score)
+            print(np.mean(cv_scores))
             del model, X_tr, X_vl
             gc.collect()
         if model_name == 'rf':
@@ -41,6 +49,22 @@ def train_model(model_name, X_train, y_train):
             gc.collect()
 
 
+def predict_new_data(new_input):
+    
+    models = []
+    for i in range(5):
+        with open('lgb_model_{}.pkl'.format(i), 'rb') as handle:
+            model = pickle.load(handle)
+            models.append(model)
+        handle.close() 
+    inputs = extract_features (new_input)
+    results = []
+    for i in range(5):
+        pred = models[i].predict(inputs)
+        results.append(pred)
+        
+    return np.mean(results, axis=0)    
+    
 if __name__ == '__main__':
     df = load_data(config.DATA_PATH)
     print('data loaded with size : {}'.format(df.shape))

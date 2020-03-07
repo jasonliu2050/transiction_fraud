@@ -7,9 +7,9 @@ n_estimator = 100
 max_depth = 10
 seed = 10
 n_jobs = -1
-stop_rounds = 1000
+stop_rounds = 400
 k_folds = 5
-verbose = 500
+verbose = 100
 
 LGB_PARAM = params = {
     'boosting_type': 'gbdt',
