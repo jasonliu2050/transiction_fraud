@@ -8,14 +8,26 @@ import config
 import pickle
 import gc
 import datetime
+from sklearn.model_selection import train_test_split
 from utils import *
 from feature_engineering import *
+from sklearn import metrics
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error
+
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import MinMaxScaler
+
 
 warnings.filterwarnings("ignore")
 
 def train_model(model_name, X_train, y_train):
     kf = KFold(config.k_folds)
-    cv_scores = []
+    valid_scores = []  # validation scores
+    train_scores = []  # training scores
     for i, (tr_idx, vl_idx) in enumerate(kf.split(X_train, y_train)):
         print('FOLD {} \n'.format(i))
         X_tr, y_tr = X_train.loc[tr_idx], y_train[tr_idx]
@@ -24,41 +36,135 @@ def train_model(model_name, X_train, y_train):
         if model_name == 'lgb':
             model = model_lgb()
             model.fit(X_tr, y_tr, eval_set=[(X_tr, y_tr), (X_vl, y_vl)], \
-                      eval_metric='rmse', verbose=config.verbose, early_stopping_rounds=config.stop_rounds)
+                      eval_metric='auc', verbose=config.verbose, early_stopping_rounds=config.stop_rounds)
             with open('lgb_model_{}.pkl'.format(i), 'wb') as handle:
                 pickle.dump(model, handle)
+
+            ax = lgb.plot_importance(model, max_num_features=20, figsize=(15,15))
+            ax3 = lgb.plot_metric(model,figsize=(15,15))
+            plt.show()
+            valid_score = model.best_score_['valid_1']['auc']
+            train_score = model.best_score_['training']['auc']
+            valid_scores.append(valid_score)
+            train_scores.append(train_score)
             del model, X_tr, X_vl
             gc.collect()
-        if model_name == 'rf':
-            model = model_rf()
-            model.fit(X_tr, y_tr)
-            with open('rf_model_{}.pkl'.format(i), 'wb') as handle:
-                pickle.dump(model, handle)
-            del model, X_tr, X_vl
-            gc.collect()
+    print('Oerall scores:')
+    fold_names = list(range(config.k_folds))
+    metrics = pd.DataFrame({'fold': fold_names,
+                          'train': train_scores,
+                          'valid': valid_scores})
+    print(metrics)
 
+def train_lgb_1(model_name, X_train, y_train):
+    k_fold = config.k_folds
+    kf = KFold(k_fold)
+    cv_scores = []
 
+    valid_scores = []  # validation scores
+    train_scores = []  # training scores
 
-def train_KNeighborsClassifier(X_train, y_train):
-    print("Start to train KNeighborsClassifier ....")
-    train = X_train.to_numpy()
-    target = y_train.to_numpy()
+    fig, axes = plt.subplots(2, 3,figsize=(18,8))
+    for i, (tr_idx, vl_idx) in enumerate(kf.split(X_train, y_train)):
+        print('FOLD {} \n'.format(i))
+        X_tr, y_tr = X_train[tr_idx], y_train[tr_idx]
+        X_vl, y_vl = X_train[vl_idx], y_train[vl_idx]
 
-    y = target
-    X = train
-    # Scaling data (KNeighbors methods do not scale automatically!)
-    scaler = StandardScaler()
-    scaler.fit(X)
-    scaled_features = scaler.transform(X)
-    # Splitting dataset
-    X_train, X_test, y_train, y_test = train_test_split(scaled_features, y, test_size=0.35)
+        model = model_lgb()
+        model.fit(X_tr, y_tr, eval_set=[(X_tr, y_tr), (X_vl, y_vl)], eval_metric='auc', verbose=config.verbose, early_stopping_rounds=config.stop_rounds)
+        with open('lgb_model_{}.pkl'.format(i), 'wb') as handle:
+            pickle.dump(model, handle)
+        #code to visualize feature importance
+        # axes[0][0] = lgb.plot_importance(model, max_num_features=20, figsize=(5,4))
+        if i<3:
+            axes[0][i] = lgb.plot_metric(model,  metric = 'auc', figsize=(4, 3),ax=axes[0][i])
+        else:
+            axes[1][i%3] = lgb.plot_metric(model, metric='auc', figsize=(4, 3),ax=axes[1][i%3])
+            axes[1][2] = lgb.plot_importance(model, max_num_features=20, figsize=(6, 4),ax=axes[1][2])
 
-    knn = KNeighborsClassifier(n_neighbors=10, n_jobs=4)
-    knn.fit(X_train, y_train)
-    y_predicted = knn.predict(X_test)
-    f1_scores = f1_score(y_test, y_predicted, average="macro")
-    error_rate = np.mean(y_predicted != y_test)
-    return f1_scores, error_rate
+        valid_score = model.best_score_['valid_1']['auc']
+        train_score = model.best_score_['training']['auc']
+        valid_scores.append(valid_score)
+        train_scores.append(train_score)
+
+        del model, X_tr, X_vl
+        gc.collect()
+
+    plt.show()
+    print('Oerall scores:')
+    fold_names = list(range(config.k_folds))
+    metrics = pd.DataFrame({'fold': fold_names,
+                          'train': train_scores,
+                          'valid': valid_scores})
+    print(metrics)
+
+def train_lgb_2(model_name, X_train, y_train, X_test, y_test):
+    print("start default lightGBM training ...")
+    model = model_lgb_default()
+    # model.fit(X_train, y_train)
+    model.fit(X_train, y_train, eval_metric='auc', verbose=config.verbose)
+    print(model)
+    # make predictions
+    expected_y = y_test
+    predicted_y = model.predict(X_test)
+    # summarize the fit of the model
+    print(metrics.classification_report(expected_y, predicted_y))
+    print("confusion_matrix:")
+    print(metrics.confusion_matrix(expected_y, predicted_y))
+
+def train_lgb_3(model_name, X_train, y_train):
+    imputer = SimpleImputer(missing_values=np.nan, strategy='median')
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    imputer.fit(X_train)
+    train = imputer.transform(X_train)
+    scaler.fit(train)
+    train = scaler.transform(train)
+    feat = train.copy()
+    oof = np.zeros(feat.shape[0])  # out of fold predictions
+    valid_scores = []  # validation scores
+    train_scores = []  # training scores
+    n_folds = 5
+    k_fold = KFold(n_splits=n_folds, shuffle=True, random_state=100)
+    labels = np.array(y_train)
+    i=0
+    for train_indices, valid_indices in k_fold.split(feat):
+        train_feat, train_labels = feat[train_indices], labels[train_indices]  # training data for the fold
+        valid_feat, valid_labels = feat[valid_indices], labels[valid_indices]  # validation data for the fold
+        # model = lgb.LGBMClassifier(**config.LGB_Param)
+        model = model_lgb()
+        model.fit(train_feat, train_labels, eval_metric='auc',
+                  eval_set=[(valid_feat, valid_labels), (train_feat, train_labels)],
+                  eval_names=['valid', 'train'], early_stopping_rounds=300, verbose=200)
+        best_iter = model.best_iteration_
+        oof[valid_indices] = model.predict_proba(valid_feat, num_iteration=best_iter)[:, 1] / k_fold.n_splits
+        valid_score = model.best_score_['valid']['auc']
+        train_score = model.best_score_['train']['auc']
+        valid_scores.append(valid_score)
+        train_scores.append(train_score)
+
+        with open('test_lgb_model_{}.pkl'.format(i), 'wb') as handle:
+            pickle.dump(model, handle)
+        i+=1
+        gc.enable()
+        #code to visualize feature importance
+        ax = lgb.plot_importance(model, max_num_features=20, figsize=(8,6))
+        ax3 = lgb.plot_metric(model,figsize=(8,6))
+        plt.show()
+        del model, train_feat, valid_feat
+        gc.collect()
+
+    valid_auc = roc_auc_score(labels,oof) # calculate the auc based on the test dataset labels and the out-of-fold predictions
+    valid_scores.append(valid_auc) # calculate the overall validation auc score
+    train_scores.append(np.mean(train_scores)) # calculate the overall average training auc score
+
+    fold_names = list(range(n_folds))
+    fold_names.append('overall')
+
+    metrics = pd.DataFrame({'fold': fold_names,
+                          'train': train_scores,
+                          'valid': valid_scores})
+    print(metrics)
+
 
 def main():
     print(datetime.datetime.now())
@@ -67,8 +173,8 @@ def main():
     identity_df = load_data(config.identity_path)
 
     # # TEST
-    # train_df = train_df[:10000]
-    # identity_df = identity_df[:10000]
+    #train_df = train_df[:10000]
+    #identity_df = identity_df[:10000]
     # # TEST
     print(train_df.shape,identity_df.shape)
 
@@ -76,8 +182,8 @@ def main():
     target = train_df['isFraud']
     train_df.drop(['isFraud'], axis=1, inplace=True)
     train_df = train_df.merge(identity_df, on='TransactionID', how='left')
-
-    handl_P_emaildomain(train_df)
+    train_df.drop(['TransactionID'],axis=1, inplace=True)
+    train_df = handl_P_emaildomain(train_df)
 
     handle_NaN(train_df)
 
@@ -87,18 +193,21 @@ def main():
 
     reduce_mem_usage(train_df)
 
-    # train knn model and get result
-    # f1_scores, error_rate = train_KNeighborsClassifier(train_df, target)
-    # print(f1_scores, error_rate)
+    other_feature_engineering(train_df)
 
-    # train lgb model and get result
-    X = train_df   #.to_numpy()
-    y = target     #.to_numpy()
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=1000)
+    # train lightgbm model and get result
+    X = train_df
+    y = target
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=1000)
+
     model_name = 'lgb'
-    train_model(model_name=model_name, X_train=X_train, y_train=y_train)
-    print('model lightGBM training done')
+    train_lgb_1(model_name=model_name, X_train=X_train.to_numpy(), y_train=y_train.to_numpy())
+    #train_model(model_name, X, y)
+    print('model lightGBM with customised parameter done')
 
+    # train_lgb_2(model_name=model_name, X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test )
+
+    # train_lgb_3(model_name=model_name, X_train=X_train, y_train=y_train)
 
     print(datetime.datetime.now())
 
