@@ -1,16 +1,15 @@
-# transiction_fraud
+# Transication Fraud
 CEBD1260 Machine Learning Project
-# Transication Fraud Detection
 ![matrix](./figures/frauddetection.png)
 
 #Team member:
 
-| Name   |
-|:-------|
-|Jun Liu |
-|Wu      |
-|Marco   |
-|Saidath |
+|     Name    |
+|:------------|
+|Jun Liu      |
+|Wu           |
+|Marco        |
+|Saidath      |
 
 Date: 2020.03.15
 -----
