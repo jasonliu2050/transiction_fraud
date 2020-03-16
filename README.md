@@ -71,7 +71,7 @@ t train/test/valid split
 
 #### Methods Using Scikit-learn Algorithms
 Picture below shows different algorithm performance. 
-#### Methods Using Keras Sequential Neural Networks
+#### Methods 
 
 
 ## Statement of contributions
