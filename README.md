@@ -76,7 +76,9 @@ Picture below shows different algorithm performance.
 
 ## Statement of contributions
 Jun Liu      github management, prototyping and integration of project, documention
-Wu  Yifan    Handle Feature 'TransactionAmt', 'Datetime', Feature Drop, Documention     
+
+Wu  Yifan    Handle Feature 'TransactionAmt', 'Datetime', Feature Drop, Documention  
+
 Marco        
 Saidath      
 
