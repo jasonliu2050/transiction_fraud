@@ -36,13 +36,16 @@ The problem we need to solve is to classify transictions. The goal is to from th
 5. Categorical values to integer convertion
 6. Other feature such as addr and cards handling
 
-#### Algorithms(models
-lightGBM to solve the problem. The tasks involved are the following:
+#### Prediction Algorithm 
 
-1. Model selection:
-  model = lgb.LGBMClassifier(**params)
+The lightGBM python library was used in order to produce models for the prediction of the attribute Is_Fraud (Binary variable either TRUE or FALSE). Following the preprocessing and the feature engineering task, as dataset was fed to this algorithm along with the following parameters, which are explained below:  
 
-Parmeter select:
+Since the predicted value is a binary variable, the following estimator was selected (i.e. LGBMClassifier): 
+
+model = lgb.LGBMClassifier(**params)
+
+Following the selection of the specific estimator, the following parameters were passed to it: 
+
 
 LGB_PARAM = params = {
     'boosting_type': 'gbdt',
@@ -62,6 +65,22 @@ LGB_PARAM = params = {
     'random_state': seed,
     'nthread': 4
 } 
+
+The boosting type selected was the Gradient Boosting Decision TREE (gbdt), which is also the default value.
+The objective selected was binary as this is a binary classification application
+The learning rate selected was 2% (0.02). Default is (0.01) which as discussed in class could lead to overfitting; based on instructors experience a 2% learning rate was proposed. 
+During our testing of the algorithm to generate the models, we team played with the feature_fraction and bagging_fraction parameter. They were quite useful as the could speed up training and deal with overfitting. The selected values were proposed during class.
+Verbose was used during in class to better understand the logic behind the training of the model and identify the exact Epoch were the error was minimized for the evaluation of the test data.
+max_depth limits the max depth of the tree model. The default is 20, a value of 10 was recommended to avoid overfitting
+max_bin parameter which is the max number of bins that feature values are be bucketed in was set to 512, the default value is 255. At 512 the accuracy of the training is reduced but may improve the overall power and avoid over-fitting.
+The metric used for the performance evaluation was AUC (area under curve). This allows us to generate these metrics in the model so that they could easily be visualized with the built-in plot function provided by the library.
+
+
+
+ 
+
+
+
 2. Memory use reduction techinic
 
 #### Methodologies:  TODO
@@ -79,8 +98,8 @@ Jun Liu:      github management, prototyping and integration of project, documen
 
 Wu  Yifan:    Handle Feature 'TransactionAmt', 'Datetime', Feature Drop, Documention  
 
-Marco        
-Saidath      
+Marco: Data Exploration, Performance Graphs, Testing algorithms, documentation        
+Saidath :     
 
 
 -----
