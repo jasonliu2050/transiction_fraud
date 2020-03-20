@@ -18,9 +18,10 @@ Using machine learning (ML) approach to fraud detection has many advantages, suc
 scenarios, and could find hidden and implicit correlations in dataset.
 In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, trainning and validation, we could reach auc sconre 0.96.
 ### Main findings TODO
-The problem we need to solve is to classify transictions. The goal is to from the transiction to determine which one is Fraud. 
+The problem we need to solve is to classify transactions. The goal is to determine which transaction will be a fraud. 
 
-### Other finding TODO
+### Other findings TODO
+Some features were more complexed to handle because they had hidden values making it impossible to determine what exactly they were.
 
 ### System Pipline
 
@@ -81,7 +82,7 @@ The metric used for the performance evaluation was AUC (area under curve). This 
 
 
 
-2. Memory use reduction techinic
+2. Memory use reduction technic
 
 #### Methodologies:  TODO
 t train/test/valid split
@@ -139,23 +140,23 @@ Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, d
 
 - This part we are going to explain the Feature Engineering that we did for our project and the purpose of doing it.
   
-Bascially there are 4 big part for the whole feature enginnering that we are going to explain about it.
+Bascially there are 4 big part for the whole feature engineering that we are going to explain.
   
 -----
 
 
 ### ['P_emaildomain'] Feature 
-- Handle the Nonsense value and transfer them in some value in order to make computer to read it:
+- Handle the Nonsense value and transfer them in some value in order to make the computer read it:
 
-- The red circle is the one that we need to take care of it:
+- The red circle is the one that we need to take care of:
 
 ![P_email](https://github.com/jasonliu2050/transiction_fraud/blob/master/figures/feature_and_preprocess/unique_of_email.png)
 
 - Therefore we would like to replace those value then when we will get less pressure when we train our model.
 
-- Also we create an new feature called ['Region_emaildomain']:
+- Also we create a new feature called ['Region_emaildomain']:
 
-- what we did is transfer all the information that we got in ['P_emaildomain'] and then to get all the exact country where those email    sent, which we think the location of those email is going to help our model a lot since each country must have their characteristic. Here is the code below: 
+- What we did is transfer all the information that we got in ['P_emaildomain'] and then to get all the exact country where those email were sent. We think the location of those email is going to help our model a lot since each country must have their characteristics. Here is the code below: 
 
 ![P_email](https://github.com/jasonliu2050/transiction_fraud/blob/master/figures/feature_and_preprocess/email_code.png)
 
@@ -164,11 +165,11 @@ Bascially there are 4 big part for the whole feature enginnering that we are goi
 
 ## ['TransactionAmt'] Feature
 
-- This feature bascilly has lots of outlier that we need to handle since we displot it out and find out this one is long_tail type: 
+- This feature basically has lots of outlier that we need to handle since we displot it out and find out this one is long_tail type: 
 
 ![long_tail](https://github.com/jasonliu2050/transiction_fraud/blob/master/figures/feature_and_preprocess/long_amt.png)
 
-- we think that if this feature has too many outliers it might make our model unsteadable, therefore we decide to drop the outlier values in this feature. 
+- we think that if this feature has too many outliers it might make our model unsteady, therefore we decide to drop the outlier values in this feature. 
 
 - Here is the code that we use:
 
@@ -185,7 +186,7 @@ Bascially there are 4 big part for the whole feature enginnering that we are goi
 
 - This feature contains all the transaction date time which is an object type in the oringal dataframe. Therefore we think we need to transfer them to the dateobject in order to let our computer read it and run.
 
-- More specify we need to add some columns like: 'df['day']', ' df['year']' etc, which is some importance features that transfer it from the ['TransactionDT'].
+- More specificaly we need to add some columns like: 'df['day']', ' df['year']' etc, which are some important features that are gotten from the ['TransactionDT'].
 
 - Here is the code that we use:
 
@@ -196,11 +197,11 @@ Bascially there are 4 big part for the whole feature enginnering that we are goi
 
 ### ['Card1'], ['Card2'] Features
 
-- .There are some importance features such as ['Card1'], ['Card2'] that has huge amounts of values which is really complex and messed. we think these features need to be handled into the category type value. 
+- .There are some importance features such as ['Card1'], ['Card2'] that has huge amounts of values which is really complex to use. We think these features need to be handled into the category type value. 
 
-- Category values are going to relase some pressure when we are going to train our model. Therefore we find those features and set up some bins(threshold). in this way, the data is more clean and orangize. 
+- Category type values are going to relase some pressure when we are going to train our model. Therefore we find those features and set up some bins(threshold). In this way, the data is more clean and orangized. 
 
-- Also we think only some importance features that need it to be handle in category type since they can affect the model a lot.
+- Also, we think only some important features need to be handled in category type since they can affect the model a lot.
 
 - Here is the code that we use:
 
