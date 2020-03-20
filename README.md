@@ -99,7 +99,7 @@ Jun Liu:      github management, prototyping and integration of project, documen
 Wu  Yifan:    Handle Feature 'TransactionAmt', 'Datetime', Feature Drop, Documention  
 
 Marco: Data Exploration, Performance Graphs, Testing algorithms, documentation        
-Saidath :     
+Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, documentation
 
 
 -----
@@ -196,7 +196,7 @@ Bascially there are 4 big part for the whole feature enginnering that we are goi
 
 ### ['Card1'], ['Card2'] Features
 
-- .There are some importance features such as ['Card1'], ['Card2'] that has huge amounts of values which is really complex and messed. we think these feature need to be handle it into the category type value. 
+- .There are some importance features such as ['Card1'], ['Card2'] that has huge amounts of values which is really complex and messed. we think these features need to be handled into the category type value. 
 
 - Category values are going to relase some pressure when we are going to train our model. Therefore we find those features and set up some bins(threshold). in this way, the data is more clean and orangize. 
 
