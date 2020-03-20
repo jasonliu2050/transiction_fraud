@@ -78,11 +78,6 @@ The metric used for the performance evaluation was AUC (area under curve). This 
 
 
 
- 
-
-
-
-2. Memory use reduction technic
 
 #### Methodologies:  TODO
 t train/test/valid split
@@ -130,7 +125,7 @@ Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, d
 
 - Since computer can only read the digital values that we have to transfer all the 'object' values into the digital values.
 
-- Memory Reduce can help us save the time when we run our model, it can improve our effiency of work.
+- Memory Reduce can help us save the time when we run our model, it can improve our effiency of work. Here, Integers and Floats values were converted into smaller number types to reduce their overall memory usage.
 
 -----
 
