@@ -202,6 +202,13 @@ Bascially there are 4 big part for the whole feature engineering that we are goi
 
 ![other_feature](https://github.com/jasonliu2050/transiction_fraud/blob/master/figures/feature_and_preprocess/other_feature_code.png)
 
+## Feature Aggregation
+- Some features were concatenated to create new ones in order to improve the model and it's precision. These features were then merged to our main data table. 
+
+- A ['User_id'] column was created containing some information from ['emaildomain'], ['card1'], ['addr1 & 2']. Then later, grouped by with respect to some aggregated statistics from ['TransactionAmt'].
+
+- We formatted and extracted some data from ['TransactionDT'], the date and time column. New features such as the year, month, day, hour and minute at which the transaction occured were obtained and added.
+
 
 ## References
 [Scikit-learn](https://scikit-learn.org/stable/whats_new.html#version-0-21-3) 
