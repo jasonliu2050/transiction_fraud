@@ -202,7 +202,7 @@ Bascially there are 4 big part for the whole feature engineering that we are goi
 
 ![other_feature](https://github.com/jasonliu2050/transiction_fraud/blob/master/figures/feature_and_preprocess/other_feature_code.png)
 
-## Feature Aggregation
+### Feature Aggregation
 - Some features were concatenated to create new ones in order to improve the model and it's precision. These features were then merged to our main data table. 
 
 - A ['User_id'] column was created containing some information from ['emaildomain'], ['card1'], ['addr1 & 2']. Then later, grouped by with respect to some aggregated statistics from ['TransactionAmt'].
