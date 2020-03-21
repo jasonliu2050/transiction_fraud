@@ -16,7 +16,7 @@ Date: 2020.03.15
 The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. 
 Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud
 scenarios, and could find hidden and implicit correlations in dataset.
-In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, trainning and validation, we could reach auc sconre 0.96.
+In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, trainning and validation, we could reach auc score 0.96.
 ### Main findings TODO
 The problem we need to solve is to classify transactions. The goal is to determine which transaction will be a fraud. 
 
