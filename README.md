@@ -1,4 +1,4 @@
-# Transication Fraud
+# Transication Fraud Detect Using Dirty and Extrely Imbalanced Dataset
 
 ![matrix](./figures/frauddetection.png)
 
@@ -13,10 +13,10 @@ Team member:
 Date: 2020.02.01 ~ 2020.03.01
 -----
 ## Introduction 
-The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud scenarios, and could find hidden and implicit correlations in dataset. In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, training and validation, we could reach AUC score 0.96.
+The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud scenarios, and could find hidden and implicit correlations in dataset. The dataset we used in this project are very dirty and imbalance, dataset preproce and feature engineering occupied most of the time, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, training and validation, we could reach AUC score 0.96.
 ### Main finding
 The problem we need to solve is to classify transactions. The goal is to determine a fraud transaction.  The target variables:  isFraud (TRUE, FALSE), the type of learning is  supervised learning, it is a classification problem. 
-We use lightDBM machine learning algorithm. Since our dataset is highly imbalanced and with many missing values(NaN), we spent 80% of time to do the dataset preprocessing and feature engineering. 20% of time to select algorithm and parameters.  
+We use lightDBM machine learning algorithm. Since our dataset is highly imbalanced and with many missing values(NaN), we spent 90% of time to do the dataset preprocessing and feature engineering. 10% of time to select algorithm and parameters.  
 
 ### Other finding
 Some features were more complexed to handle because they had hidden values making it impossible to determine what exactly they were.
