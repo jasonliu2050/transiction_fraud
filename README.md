@@ -3,7 +3,7 @@
 ![matrix](./figures/frauddetection.png)
 
 ## Resources
-Dataset used in this Project
+Dataset
 
 (example dataset contains 1000 record only, full dataset is over 1M):
 
@@ -11,7 +11,7 @@ Dataset used in this Project
 
 [ID-Dataset](https://github.com/jasonliu2050/project/blob/master/id.csv)  
 
-###Team member:
+### Team member:
 |     Name    |
 |:------------|
 |Jason Liu    |
