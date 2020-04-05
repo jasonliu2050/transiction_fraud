@@ -5,7 +5,7 @@ CEBD1260 Machine Learning Project
 Team member:
 |     Name    |
 |:------------|
-|Jun Liu      |
+|Jason Liu      |
 |Wu Yifan     |
 |Marco        |
 |Saidath      |
@@ -13,14 +13,12 @@ Team member:
 Date: 2020.03.15
 -----
 ## Introduction 
-The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. 
-Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud
-scenarios, and could find hidden and implicit correlations in dataset.
-In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, trainning and validation, we could reach auc score 0.96.
-### Main findings TODO
-The problem we need to solve is to classify transactions. The goal is to determine which transaction will be a fraud. 
+The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud scenarios, and could find hidden and implicit correlations in dataset. In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, training and validation, we could reach AUC score 0.96.
+### Main finding
+The problem we need to solve is to classify transactions. The goal is to determine a fraud transaction.  The target variables:  isFraud (TRUE, FALSE), the type of learning is  supervised learning, it is a classification problem. 
+We use lightDBM machine learning algorithm. Since our dataset is highly imbalanced and with many missing values(NaN), we spent 80% of time to do the dataset preprocessing and feature engineering. 20% of time to select algorithm and parameters.  
 
-### Other findings TODO
+### Other finding
 Some features were more complexed to handle because they had hidden values making it impossible to determine what exactly they were.
 
 ### System Pipline
@@ -79,8 +77,10 @@ The metric used for the performance evaluation was AUC (area under curve). This 
 
 
 
-#### Methodologies:  TODO
-t train/test/valid split
+#### Methodologies:
+Train/test/valid split
+Use Cross-Validation to allow us to utilize our data better. 
+Simple K-Folds — We split our data into K parts, let’s use K= 5 for example, then we will have 5 models. Use the means value of all 5 output to predict for new input.
 
 ### 4. Final Test Result
 
