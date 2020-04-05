@@ -3,11 +3,15 @@
 ![matrix](./figures/frauddetection.png)
 
 ## Resources
-Dataset used in this Project(example dataset contains 1000 record only, full dataset is over 1M):
- [TransictionDataset](https://github.com/jasonliu2050/project/blob/master/transiction.csv)  
- [ID-Dataset](https://github.com/jasonliu2050/project/blob/master/id.csv)  
+Dataset used in this Project
 
-Team member:
+(example dataset contains 1000 record only, full dataset is over 1M):
+
+[TransictionDataset](https://github.com/jasonliu2050/project/blob/master/transiction.csv)  
+
+[ID-Dataset](https://github.com/jasonliu2050/project/blob/master/id.csv)  
+
+###Team member:
 |     Name    |
 |:------------|
 |Jason Liu    |
