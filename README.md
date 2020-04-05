@@ -9,7 +9,7 @@ Dataset
 
 [TransictionDataset](https://github.com/jasonliu2050/project/blob/master/transiction.csv)  
 
-[ID-Dataset](https://github.com/jasonliu2050/project/blob/master/id.csv)  
+[ID-Dataset](./figures/id.csv)  
 
 ### Team member:
 |     Name    |
@@ -187,6 +187,9 @@ Bascially there are 4 big part for the whole feature engineering that we are goi
 
 - We formatted and extracted some data from ['TransactionDT'], the date and time column. New features such as the year, month, day, hour and minute at which the transaction occured were obtained and added.
 
+## Final Score
+![matrix](./figures/compare.png)
+![matrix](./figures/score.png)
 
 ## References
 [LightGBM](https://lightgbm.readthedocs.io/en/latest/index.html) 
