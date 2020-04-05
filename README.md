@@ -1,16 +1,16 @@
 # Transication Fraud
-CEBD1260 Machine Learning Project
+
 ![matrix](./figures/frauddetection.png)
 
 Team member:
 |     Name    |
 |:------------|
-|Jason Liu      |
+|Jason Liu    |
 |Wu Yifan     |
 |Marco        |
 |Saidath      |
 
-Date: 2020.03.15
+Date: 2020.02.01 ~ 2020.03.01
 -----
 ## Introduction 
 The financial services industry and the industries that involve financial transactions are suffering from fraud-related losses and damages. Using machine learning (ML) approach to fraud detection has many advantages, such as real-time processing, automatic detection of possible fraud scenarios, and could find hidden and implicit correlations in dataset. In this project, we use lightDBM machine learning model, after doing dataset preprocessing. feature engineering, training and validation, we could reach AUC score 0.96.
@@ -22,18 +22,6 @@ We use lightDBM machine learning algorithm. Since our dataset is highly imbalanc
 Some features were more complexed to handle because they had hidden values making it impossible to determine what exactly they were.
 
 ### System Pipline
-
-
-#### Dataset preprocessing TODO
-
-1. NaN handling
-2. Feature drop
-
-#### Feature Engineering TODO
-3. Email domain and datatime handling
-4. dataset merge and propagation 
-5. Categorical values to integer convertion
-6. Other feature such as addr and cards handling
 
 #### Prediction Algorithm 
 
@@ -74,32 +62,13 @@ max_depth limits the max depth of the tree model. The default is 20, a value of 
 max_bin parameter which is the max number of bins that feature values are be bucketed in was set to 512, the default value is 255. At 512 the accuracy of the training is reduced but may improve the overall power and avoid over-fitting.
 The metric used for the performance evaluation was AUC (area under curve). This allows us to generate these metrics in the model so that they could easily be visualized with the built-in plot function provided by the library.
 
-
-
-
 #### Methodologies:
 Train/test/valid split
 Use Cross-Validation to allow us to utilize our data better. 
 Simple K-Folds — We split our data into K parts, let’s use K= 5 for example, then we will have 5 models. Use the means value of all 5 output to predict for new input.
 
-### 4. Final Test Result
-
-#### Methods Using Scikit-learn Algorithms
-Picture below shows different algorithm performance. 
-#### Methods 
-
-
-## Statement of contributions
-Jun Liu:      github management, prototyping and integration of project, documention
-
-Wu  Yifan:    Handle Feature 'TransactionAmt', 'Datetime', Feature Drop, Documention  
-
-Marco: Data Exploration, Performance Graphs, Testing algorithms, documentation        
-Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, documentation
-
-
 -----
-# Data Preprocessing 
+## Data Preprocessing 
 
 - This part bascially we need handle the NAN values in our dataset 
 
@@ -109,7 +78,7 @@ Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, d
 
 -----
 
-# Handle NAN Value
+## Handle NAN Value
 
 - NAN Value has crucial part in data preprocessing. what we did is fill in the float and integer columns with their median, fill in 'unknow' into the 'object' columns.
 
@@ -121,7 +90,7 @@ Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, d
 
 -----
 
-# Reduce Memory and Transfer values
+## Reduce Memory and Transfer values
 
 - Since computer can only read the digital values that we have to transfer all the 'object' values into the digital values.
 
@@ -131,7 +100,7 @@ Saidath :     Handling 'Card1-6' 'Addr1-2' Features & dropping, Memory Saving, d
 
 
 
-# Feature Engineering 
+## Feature Engineering 
 
 - This part we are going to explain the Feature Engineering that we did for our project and the purpose of doing it.
   
@@ -211,7 +180,7 @@ Bascially there are 4 big part for the whole feature engineering that we are goi
 
 
 ## References
-[Scikit-learn](https://scikit-learn.org/stable/whats_new.html#version-0-21-3) 
+[LightGBM](https://lightgbm.readthedocs.io/en/latest/index.html) 
 [Scikit-kearn Classifier comparison](https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html)   
 [Matplotlib3.1.1](https://matplotlib.org/3.1.1/users/whats_new.html)  
 [Principal component analysis (PCA)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
