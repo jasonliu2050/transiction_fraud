@@ -7,7 +7,7 @@ Dataset
 
 (example dataset contains 1000 records only)
 
-[Transiction-Dataset](./figures/transication.csv)  
+[Transiction-Dataset](./figures/transaction.csv)  
 
 [ID-Dataset](./figures/id.csv)  
 
