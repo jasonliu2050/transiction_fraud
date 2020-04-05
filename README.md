@@ -1,13 +1,13 @@
-# Transication Fraud Detect Using Dirty and Extrely Imbalanced Dataset
+# Transication Fraud Detect (dirty/extrely imbalanced dataset)
 
 ![matrix](./figures/frauddetection.png)
 
 ## Resources
 Dataset
 
-(example dataset contains 1000 record only, full dataset is over 1M):
+(example dataset contains 1000 records only)
 
-[TransictionDataset](https://github.com/jasonliu2050/project/blob/master/transiction.csv)  
+[Transiction-Dataset](./figures/transication.csv)  
 
 [ID-Dataset](./figures/id.csv)  
 
