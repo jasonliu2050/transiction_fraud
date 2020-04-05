@@ -1,0 +1,100 @@
+TransactionID,id_01,id_02,id_03,id_04,id_05,id_06,id_07,id_08,id_09,id_10,id_11,id_12,id_13,id_14,id_15,id_16,id_17,id_18,id_19,id_20,id_21,id_22,id_23,id_24,id_25,id_26,id_27,id_28,id_29,id_30,id_31,id_32,id_33,id_34,id_35,id_36,id_37,id_38,DeviceType,DeviceInfo
+2987004,0,70787,,,,,,,,,100,NotFound,,-480,New,NotFound,166,,542,144,,,,,,,,New,NotFound,Android 7.0,samsung browser 6.2,32,2220x1080,match_status:2,T,F,T,T,mobile,SAMSUNG SM-G892A Build/NRD90M
+2987008,-5,98945,,,0,-5,,,,,100,NotFound,49,-300,New,NotFound,166,,621,500,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,1334x750,match_status:1,T,F,F,T,mobile,iOS Device
+2987010,-5,191631,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,121,,410,142,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987011,-5,221832,,,0,-6,,,,,100,NotFound,52,,New,NotFound,225,,176,507,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,
+2987016,0,7460,0,0,1,0,,,0,0,100,NotFound,,-300,Found,Found,166,15,529,575,,,,,,,,Found,Found,Mac OS X 10_11_6,chrome 62.0,24,1280x800,match_status:2,T,F,T,T,desktop,MacOS
+2987017,-5,61141,3,0,3,0,,,3,0,100,NotFound,52,-300,Found,Found,166,18,529,600,,,,,,,,Found,Found,Windows 10,chrome 62.0,24,1366x768,match_status:2,T,F,T,T,desktop,Windows
+2987022,-15,,,,,,,,,,,NotFound,14,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2987038,0,31964,0,0,0,-10,,,0,0,100,Found,,-300,Found,Found,166,15,352,533,,,,,,,,Found,Found,Android,chrome 62.0,32,1920x1080,match_status:2,T,F,T,T,mobile,
+2987040,-10,116098,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,121,,410,142,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987048,-5,257037,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,484,507,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987049,-5,287959,,,1,-11,,,,,100,NotFound,52,,New,NotFound,225,,254,507,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987057,0,88525,,,,,,,,,100,NotFound,,-300,New,NotFound,166,,278,600,,,,,,,,New,NotFound,Android 7.0,chrome 62.0 for android,32,1920x1080,match_status:2,T,F,T,T,mobile,SM-G930V Build/NRD90M
+2987066,-5,54927,0,0,0,-1,,,0,0,100,NotFound,52,-360,Found,Found,166,,307,333,,,,,,,,Found,Found,Windows 10,chrome 62.0,24,1680x1050,match_status:2,T,F,T,T,desktop,Windows
+2987069,0,69542,0,0,2,-4,,,0,0,100,Found,,-300,Found,Found,166,15,352,533,,,,,,,,Found,Found,Linux,chrome 62.0,32,1920x1080,match_status:2,T,F,T,T,desktop,
+2987070,0,132356,,,1,-6,,,,,100,NotFound,,-300,New,NotFound,166,13,529,549,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,1136x640,match_status:1,T,F,T,T,mobile,iOS Device
+2987072,0,275611,,,0,0,,,,,100,NotFound,20,,New,NotFound,225,,266,566,,,,,,,,New,NotFound,,chrome 62.0 for android,,,,F,F,T,T,mobile,BLADE A602 Build/MRA58K
+2987074,-5,419136,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,266,305,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987084,-5,436352,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,290,401,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987093,-5,34810,,,1,0,,,0,0,93.75,NotFound,52,-300,New,NotFound,166,,548,391,,,,,,,,Found,Found,Windows 10,edge 15.0,24,,match_status:2,T,F,T,T,desktop,Windows
+2987099,-10,129080,0,0,9,-43,22,-34,0,0,100,Found,49,-300,Found,Found,166,12,122,549,252,14,IP_PROXY:TRANSPARENT,11,321,184,Found,Found,Found,iOS 11.0.3,mobile safari generic,32,1334x750,match_status:2,T,F,T,F,mobile,iOS Device
+2987100,0,264818,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,,215,533,,,,,,,,New,NotFound,Android 7.0,chrome 62.0 for android,32,1920x1080,match_status:2,T,F,T,T,mobile,SM-G930V Build/NRD90M
+2987101,0,49557,0,0,0,0,,,0,0,100,NotFound,,-300,Found,Found,166,,100,535,,,,,,,,Found,Found,Mac OS X 10_7_5,chrome 49.0,24,1280x800,match_status:2,T,T,T,T,desktop,MacOS
+2987104,0,30696,0,0,0,0,,,0,0,100,Found,,-300,Found,Found,166,,215,533,,,,,,,,Found,Found,Android 7.0,chrome 62.0 for android,32,1920x1080,match_status:2,T,F,T,T,mobile,SM-G930V Build/NRD90M
+2987105,0,194580,,,12,-6,,,,,100,NotFound,,,New,NotFound,225,15,345,507,,,,,,,,New,NotFound,,chrome 62.0 for android,,,,F,F,T,T,mobile,XT1635-02 Build/NPN26.118-22-2
+2987108,-15,,,,,,,,,,,NotFound,14,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2987111,-5,252899,,,0,0,,,0,0,95.08000183,NotFound,52,,New,NotFound,225,,266,325,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987114,-5,190935,0,0,6,-9,,,0,0,100,NotFound,52,,Found,Found,225,13,242,507,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987119,0,23923,0,0,0,0,,,0,0,100,NotFound,,-480,Found,Found,166,,215,222,,,,,,,,Found,Found,Mac OS X 10_12_6,chrome 61.0,24,5120x2880,match_status:2,T,F,T,T,desktop,MacOS
+2987121,0,18305,2,0,2,0,,,2,0,100,NotFound,,-300,Found,Found,166,,215,277,,,,,,,,Found,Found,Mac OS X 10_12_6,chrome 62.0,24,2880x1800,match_status:2,T,F,T,T,desktop,MacOS
+2987125,0,32876,2,0,2,0,,,2,0,100,Found,,-300,Found,Found,166,,215,277,,,,,,,,Found,Found,Mac OS X 10_12_6,chrome 62.0,24,2880x1800,match_status:2,T,F,T,T,desktop,MacOS
+2987130,-10,175789,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,121,,410,142,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987138,-5,68343,0,0,1,0,,,1,0,100,NotFound,52,-300,Found,Found,166,,193,368,,,,,,,,Found,Found,Windows 10,edge 16.0,24,1920x1200,match_status:2,T,F,T,T,desktop,Windows
+2987141,-5,110477,,,0,-5,,,1,0,95.65000153,NotFound,49,-300,New,NotFound,166,,650,597,,,,,,,,Found,Found,Mac OS X 10_13_1,safari generic,24,2560x1600,match_status:2,T,F,F,F,desktop,MacOS
+2987144,-5,157470,0,0,0,-5,,,1,0,100,Found,49,-300,Found,Found,166,,650,597,,,,,,,,Found,Found,Mac OS X 10_13_1,safari generic,24,2560x1600,match_status:2,T,F,F,F,desktop,MacOS
+2987145,-5,127488,,,2,-11,,,,,100,NotFound,49,-360,New,NotFound,166,12,352,214,,,,,,,,New,NotFound,iOS 11.1.0,mobile safari 11.0,32,2048x1536,match_status:1,T,F,F,F,mobile,iOS Device
+2987148,-5,123916,,,0,0,,,,,100,NotFound,49,-300,New,NotFound,166,,390,549,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,1334x750,match_status:1,T,F,F,T,mobile,iOS Device
+2987156,-5,55836,,,0,0,,,,,100,NotFound,52,-300,New,NotFound,166,,542,489,,,,,,,,New,NotFound,Windows 10,chrome 62.0,24,1024x768,match_status:2,T,F,T,F,desktop,Windows
+2987167,0,124221,,,0,0,,,,,100,NotFound,,-300,Found,NotFound,166,13,390,549,,,,,,,,Found,NotFound,Windows 10,edge 14.0,24,1366x768,match_status:2,T,T,T,T,desktop,Windows
+2987173,0,113499,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,,215,368,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,1136x640,match_status:1,T,F,T,T,mobile,iOS Device
+2987183,0,79656,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,,492,600,,,,,,,,New,NotFound,Android,chrome 56.0 for android,32,1280x720,match_status:2,T,F,T,T,mobile,Z970
+2987188,-5,15464,0,0,4,-44,6,-55,0,0,100,Found,55,-300,Found,Found,166,13,122,256,252,14,IP_PROXY:TRANSPARENT,11,321,102,Found,Found,Found,Android,chrome 62.0,32,2560x1440,match_status:2,T,F,T,T,mobile,
+2987189,-5,363527,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,427,507,,,,,,,,New,NotFound,,firefox 57.0,,,,F,F,T,T,desktop,Windows
+2987190,-20,157297,,,,,,,,,100,NotFound,49,,Unknown,,225,,266,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
+2987192,-5,302597,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,266,507,,,,,,,,New,NotFound,,firefox 57.0,,,,F,F,T,T,desktop,Windows
+2987196,-5,211439,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,266,325,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987197,0,77852,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,,390,549,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,2208x1242,match_status:1,T,F,T,T,mobile,iOS Device
+2987198,0,49347,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,15,100,549,,,,,,,,New,NotFound,iOS 11.0.3,mobile safari 11.0,32,2048x1536,match_status:1,T,F,T,T,mobile,iOS Device
+2987199,-20,146516,,,0,0,,,,,100,NotFound,49,,Unknown,,225,,266,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
+2987207,-5,84798,,,4,0,,,,,100,NotFound,49,-480,New,NotFound,166,,529,222,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,2001x1125,match_status:1,T,F,F,T,mobile,iOS Device
+2987209,-5,86577,0,0,6,0,,,0,0,100,NotFound,52,,Found,Found,225,,266,507,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987211,0,163246,0,0,0,0,,,0,0,100,NotFound,,-360,Found,Found,166,,548,214,,,,,,,,Found,Found,Android 7.0,chrome 62.0 for android,32,,match_status:2,T,F,T,T,mobile,SM-N920V Build/NRD90M
+2987236,-5,52546,,,0,0,,,,,100,NotFound,49,-300,New,NotFound,166,,390,549,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,2208x1242,match_status:1,T,F,F,T,mobile,iOS Device
+2987240,0,169947,0,0,3,0,,,0,0,100,NotFound,,,Found,Found,225,,266,325,,,,,,,,Found,Found,,chrome 54.0 for android,,,,F,F,T,T,mobile,Redmi Note 4 Build/MMB29M
+2987243,0,222455,0,0,0,0,,,0,0,100,NotFound,43,,Found,Found,225,,266,325,,,,,,,,Found,Found,,chrome 54.0 for android,,,,F,F,T,T,mobile,Redmi Note 4 Build/MMB29M
+2987245,0,271870,0,0,3,0,,,0,0,100,NotFound,43,,Found,Found,225,,266,325,,,,,,,,Found,Found,,chrome 54.0 for android,,,,F,F,T,T,mobile,Redmi Note 4 Build/MMB29M
+2987248,-5,154042,,,1,0,,,,,100,NotFound,49,-300,New,NotFound,166,,215,277,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari uiwebview,32,2048x1536,,T,F,F,T,mobile,iOS Device
+2987252,-5,133082,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,225,,266,325,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987258,-5,104033,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,225,,266,325,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987259,-20,87090,,,21,-33,,,,,100,NotFound,49,,Unknown,,225,15,417,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
+2987262,-5,547674,,,7,-29,,,,,100,NotFound,52,,New,NotFound,225,15,266,507,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987265,0,34648,,,0,0,,,,,100,NotFound,,-300,New,NotFound,166,,410,256,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,2048x1536,match_status:1,T,F,T,T,mobile,iOS Device
+2987266,-5,235745,,,0,0,,,,,100,NotFound,52,,Found,NotFound,225,,427,223,,,,,,,,Found,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987270,0,42969,0,0,0,0,,,0,0,100,Found,,-300,Found,Found,166,,410,256,,,,,,,,Found,Found,iOS 11.1.2,mobile safari 11.0,32,2048x1536,match_status:1,T,F,T,T,mobile,iOS Device
+2987271,-5,95459,,,0,0,,,,,100,NotFound,52,-300,Found,NotFound,166,,100,368,,,,,,,,Found,NotFound,Windows 10,chrome 62.0,24,1920x1080,match_status:2,T,F,T,F,desktop,Windows
+2987273,-5,67018,,,0,-1,,,,,100,NotFound,49,-480,New,NotFound,166,,312,222,,,,,,,,New,NotFound,iOS 11.1.0,mobile safari 11.0,32,2048x1536,match_status:1,T,F,F,T,mobile,iOS Device
+2987275,0,95044,0,0,0,0,,,0,0,100,NotFound,,-300,Found,Found,166,,529,549,,,,,,,,Found,Found,Mac OS X 10_9_5,chrome,24,1440x900,match_status:2,T,T,T,T,desktop,MacOS
+2987281,-5,80312,0,0,0,0,,,0,0,100,NotFound,52,-300,Found,Found,166,,542,533,,,,,,,,Found,Found,Windows 10,chrome 62.0,24,1366x768,match_status:2,T,F,T,T,desktop,Windows
+2987284,-5,269062,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,266,401,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987287,0,170760,,,0,0,,,,,100,NotFound,,,New,NotFound,225,,266,507,,,,,,,,New,NotFound,,safari generic,,,,F,F,T,T,desktop,
+2987288,-20,258138,,,0,-1,,,,,100,NotFound,49,,Unknown,,225,,290,401,,,,,,,,New,NotFound,,chrome 62.0 for ios,,,,F,F,F,F,mobile,
+2987301,-15,104992,0,0,0,0,,,0,0,100,NotFound,20,,Found,Found,225,,153,325,,,,,,,,Found,Found,,chrome 62.0 for android,,,,F,F,T,T,mobile,Lenovo PB1-750M Build/S100
+2987311,0,88077,,,1,0,,,0,0,94.29000092,NotFound,,-360,New,NotFound,166,12,529,214,,,,,,,,Found,Found,Mac OS X 10_13_1,safari generic,24,1600x900,,T,F,T,T,desktop,MacOS
+2987316,-5,485513,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,225,,266,325,,,,,,,,Found,Found,,firefox 57.0,,,,F,F,T,T,desktop,Windows
+2987319,-15,,,,,,,,,,,NotFound,14,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2987327,-5,91167,,,0,0,,,0,0,96.19000244,NotFound,52,-360,New,NotFound,166,,454,214,,,,,,,,Found,Found,Windows 7,chrome 62.0,24,1366x768,,T,F,T,T,desktop,Windows
+2987328,-5,214916,0,0,0,0,,,0,0,100,NotFound,52,,Found,Found,225,,176,507,,,,,,,,Found,Found,,chrome 62.0,,,,F,F,T,T,desktop,Windows
+2987332,-5,88570,,,1,0,,,,,100,NotFound,49,-360,New,NotFound,166,,633,215,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari generic,32,2208x1242,match_status:2,T,F,T,F,mobile,iOS Device
+2987333,-5,36268,,,0,0,,,0,0,90.56999969,NotFound,52,-480,New,NotFound,166,,529,222,,,,,,,,Found,Found,Windows 8.1,chrome 62.0,24,1366x768,match_status:2,T,F,T,T,desktop,Windows
+2987335,-5,134690,0,0,1,0,,,0,0,100,Found,49,-360,Found,Found,166,,633,215,,,,,,,,Found,Found,iOS 11.1.2,mobile safari generic,32,2208x1242,match_status:2,T,F,T,F,mobile,iOS Device
+2987336,-5,155564,0,0,1,0,,,0,0,100,Found,49,-360,Found,Found,166,,633,215,,,,,,,,Found,Found,iOS 11.1.2,mobile safari generic,32,2208x1242,match_status:2,T,F,T,F,mobile,iOS Device
+2987337,-5,614791,,,0,0,,,,,100,NotFound,49,-360,New,NotFound,166,,542,214,,,,,,,,New,NotFound,iOS 11.1.2,mobile safari 11.0,32,2208x1242,match_status:1,T,F,F,T,mobile,iOS Device
+2987338,-5,214994,0,0,1,0,,,0,0,100,Found,49,-360,Found,Found,166,,633,215,,,,,,,,Found,Found,iOS 11.1.2,mobile safari generic,32,2208x1242,match_status:2,T,F,T,F,mobile,iOS Device
+2987352,0,163133,,,0,0,,,,,100,NotFound,,,New,NotFound,225,,290,401,,,,,,,,New,NotFound,,chrome 62.0 for android,,,,F,F,T,T,mobile,LT22i Build/6.2.A.1.100
+2987355,-5,88945,0,0,0,0,,,0,0,100,NotFound,49,-300,Found,Found,166,,215,484,,,,,,,,Found,Found,Mac OS X 10_11_6,safari generic,24,1440x900,match_status:2,T,F,T,F,desktop,MacOS
+2987361,-5,153524,0,0,0,0,,,0,0,100,Found,49,-300,Found,Found,166,,215,484,,,,,,,,Found,Found,Mac OS X 10_11_6,safari generic,24,1440x900,match_status:2,T,F,T,F,desktop,MacOS
+2987366,0,6300,0,0,0,-8,,,0,0,100,Found,,-300,Found,Found,166,15,100,533,,,,,,,,Found,Found,iOS 11.0.3,mobile safari 11.0,32,2048x1536,match_status:1,T,F,T,T,mobile,iOS Device
+2987367,-5,141271,,,9,-81,,,0,0,97.54000092,NotFound,52,-300,New,NotFound,166,13,121,333,,,,,,,,Found,Found,Windows 10,firefox,24,1440x900,match_status:2,T,F,T,F,desktop,rv:52.0
+2987368,-20,381993,,,5,-13,,,,,100,NotFound,49,,Unknown,,225,,266,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
+2987374,-5,70761,0,0,0,0,,,0,0,100,NotFound,49,-300,Found,Found,166,,215,484,,,,,,,,Found,Found,Mac OS X 10_11_6,safari generic,24,1440x900,match_status:2,T,F,T,F,desktop,MacOS
+2987376,-5,108757,,,0,0,,,,,100,NotFound,49,-300,New,NotFound,166,,215,597,,,,,,,,New,NotFound,Mac OS X 10_13_1,safari generic,24,1366x768,match_status:2,T,F,F,T,desktop,MacOS
+2987380,-20,324495,,,0,-5,,,,,100,NotFound,49,,Unknown,,225,,254,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
+2987384,-5,561432,,,0,0,,,,,100,NotFound,52,,New,NotFound,225,,266,122,,,,,,,,New,NotFound,,chrome 62.0,,,,F,F,T,T,desktop,
+2987386,0,131248,0,0,6,-10,,,0,0,100,NotFound,20,,Found,Found,166,15,352,222,,,,,,,,Found,Found,,chrome 60.0 for android,,,,F,F,T,T,mobile,SM-G950U Build/NRD90M
+2987387,0,68658,,,0,0,,,,,100,NotFound,,-360,New,NotFound,166,,542,333,,,,,,,,New,NotFound,Android 7.0,chrome 62.0 for android,32,2672x1440,match_status:2,T,F,T,T,mobile,LG-H872 Build/NRD90U
+2987389,0,67872,,,0,0,,,,,100,NotFound,,-420,New,NotFound,166,,548,350,,,,,,,,New,NotFound,Mac,safari generic,24,1440x900,match_status:2,T,F,T,T,desktop,MacOS
+2987390,0,60309,0,0,0,0,,,0,0,100,NotFound,,-300,Found,Found,166,13,100,500,,,,,,,,Found,Found,Mac OS X 10_9_5,safari generic,24,1280x800,match_status:2,T,T,T,T,desktop,MacOS
+2987398,0,228519,,,0,0,,,,,100,NotFound,20,,New,NotFound,225,,153,563,,,,,,,,New,NotFound,,chrome 62.0 for android,,,,F,F,T,T,mobile,LG-K500 Build/MMB29M
+2987404,-5,78125,,,1,-1,,,,,100,NotFound,49,-300,New,NotFound,166,15,542,489,,,,,,,,New,NotFound,iOS 10.3.3,mobile safari 10.0,32,2208x1242,match_status:1,T,F,F,T,mobile,iOS Device
+2987405,-20,550210,,,0,-1,,,,,100,NotFound,49,,Unknown,,225,,176,507,,,,,,,,New,NotFound,,mobile safari 11.0,,,,F,F,F,T,mobile,
